@@ -16,12 +16,17 @@
         <option value="paid">Price (Paid)</option>
       </select>
       <input type="text" class="border-2 border-gray-300 rounded-md px-2 py-1" placeholder="search '/'">
+      <a href="https://github.com/mytchallb/resources.mytchall.dev" target="_blank">
+        <img :src="github.src" alt="github" class="w-6 h-6">
+      </a>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import github from "../assets/logo-github.svg";
+
 
 const tags = ref([
   'free',

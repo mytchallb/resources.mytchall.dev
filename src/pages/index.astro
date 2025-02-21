@@ -9,7 +9,7 @@ import Sidebar from '../components/Sidebar.vue';
 const tools = await getCollection('tools');
 
 let categories = tools.map((tool) => tool.data.category ?? 'Unset');
-let uniqueCategories = [...new Set(categories)];
+let uniqueCategories = [...new Set(categories)].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 let categoriesWithCount = uniqueCategories.map((category) => ({
 	name: category,
 	count: categories.filter((c) => c === category).length

@@ -4,7 +4,7 @@
     
     <button 
       @click="toggleSidebar" 
-      class="cursor-pointer absolute -right-2 top-2 p-1 bg-gray-400 hover:bg-gray-100 shadow-md rounded"
+      class="cursor-pointer absolute -right-2 top-2 p-1 bg-gray-400 hover:bg-gray-100 shadow-md rounded z-20"
       :class="{ 'rotate-180': !isOpen }"
     >
       <svg 
@@ -23,8 +23,13 @@
       </svg>
     </button>
     <ul class="flex flex-col gap-1">
-      <li v-for="category in categories" :key="category.name" class="cursor-pointer hover:bg-gray-500 rounded-md p-2">
-        <span class="capitalize">{{ category.name }}</span> <span v-if="category.count" class="text-gray-400">({{ category.count }})</span>
+      <li v-for="category in categories" 
+          :key="category.name" 
+          class="cursor-pointer hover:bg-gray-500 rounded-md p-2 relative whitespace-nowrap overflow-hidden">
+        <div class="transition-opacity duration-300" :class="{ 'opacity-0': !isOpen }">
+          <span class="capitalize">{{ category.name }}</span>
+          <span v-if="category.count" class="text-gray-400">({{ category.count }})</span>
+        </div>
       </li>
     </ul>
   </div>
