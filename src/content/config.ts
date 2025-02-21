@@ -6,9 +6,15 @@ const toolsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     tags: z.array(z.string()),
+    category: z.string().optional(),
+    url: z.string().optional(),
+    cost: z.string().optional(),
+    excerpt: z.string().optional(),
   })
 });
 
 export const collections = {
   'tools': toolsCollection,
 };
+
+

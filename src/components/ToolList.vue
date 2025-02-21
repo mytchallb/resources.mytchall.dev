@@ -1,23 +1,16 @@
 <template>
-  <div>
-    <h1>Tool List</h1>
-    <ul>
-      <li v-for="tool in tools" :key="tool.slug" class="bg-white p-4 rounded-md">
-        {{ tool.data.title }}
-      </li>
+  <div class="w-full h-full overflow-y-auto">
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 p-4">
+      <ToolCard v-for="tool in tools" :tool="tool" :key="tool.slug" />
     </ul>
   </div>
 </template>
 
 <script setup>
 import { onMounted } from 'vue'
+import ToolCard from './ToolCard.vue'
 
-const props = defineProps({
-  tools: {
-    type: Array,
-    required: true
-  }
-})
+const props = defineProps(['tools'])
 
 onMounted(() => {
   console.log("heloo")

@@ -3,15 +3,28 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import ToolList from '../components/ToolList.vue';
+import Filters from '../components/Filters.vue';
+import Sidebar from '../components/Sidebar.vue';
 
 const tools = await getCollection('tools');
+
+let categories = tools.map((tool) => tool.data.category ?? 'Unset');
+let uniqueCategories = [...new Set(categories)];
+let categoriesWithCount = uniqueCategories.map((category) => ({
+	name: category,
+	count: categories.filter((c) => c === category).length
+}));
 
 ---
 
 <Layout>
 
-
-	<ToolList tools={tools} client:load />
-
+	<div class="flex h-full w-full">
+	<Sidebar categories={categoriesWithCount} client:load />
+		<div class="flex-1 flex flex-col">
+			<Filters client:load />
+			<ToolList tools={tools} client:load />
+		</div>
+	</div>
 
 </Layout>
