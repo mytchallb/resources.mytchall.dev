@@ -4,6 +4,7 @@ tags: [""]
 image: "/images/reaper.jpg"
 category: "audio"
 url: "https://www.reaper.fm/"
+pricing: "paid"
 cost: "$60 - $225 usd"
 excerpt: "A digital audio app offering multitrack audio and MIDI recording, editing, processing, mixing and mastering."
 ---

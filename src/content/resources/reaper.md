@@ -1,6 +1,6 @@
 ---
 title: "Reaper"
-tags: [""]
+tags: ["app"]
 image: "/images/reaper.jpg"
 category: "audio"
 url: "https://www.reaper.fm/"

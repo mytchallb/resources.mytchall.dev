@@ -1,20 +1,59 @@
 @import "tailwindcss";
 
+/* Split like this to allow a theme switcher */
+:root {
+  --color-theme-primary: #c0c78c;
+  --color-theme-secondary: #a6b37d;
+  --color-theme-background: #fefae0;
+  --color-theme-accent: #b99470;
+  --color-theme-accent-secondary: #c9ad92;
+  --color-theme-copy: #4a4a4a;
+
+  /* Price tag colors */
+  --color-theme-free: #7cb37d; /* A gentle green */
+  --color-theme-paid: #b37d7d; /* A soft red */
+  --color-theme-freemium: #7d95b3; /* A muted blue */
+
+  /* General tag colors */
+  --color-theme-tag-1: #9ca3af; /* Base tag color */
+  --color-theme-tag-2: #8b93a0; /* Slightly darker variant */
+}
+
+@theme {
+  --color-primary: var(--color-theme-primary);
+  --color-secondary: var(--color-theme-secondary);
+  --color-background: var(--color-theme-background);
+  --color-accent: var(--color-theme-accent);
+  --color-accent-secondary: var(--color-theme-accent-secondary);
+  --color-copy: var(--color-theme-copy);
+
+  --color-free: var(--color-theme-free);
+  --color-paid: var(--color-theme-paid);
+  --color-freemium: var(--color-theme-freemium);
+  --color-tag-1: var(--color-theme-tag-1);
+  --color-tag-2: var(--color-theme-tag-2);
+}
 
 .tag {
-  @apply capitalize whitespace-nowrap text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-md;
+  @apply capitalize whitespace-nowrap text-sm text-copy px-2 py-1 rounded-md;
+}
+
+.tag:nth-child(odd) {
+  @apply bg-tag-1;
+}
+
+.tag:nth-child(even) {
+  @apply bg-tag-2;
 }
 
 .url {
-  @apply bg-blue-500 text-white lowercase;
+  @apply !bg-primary text-copy lowercase;
 }
 
 .pricing {
-  @apply bg-green-500 text-white ;
+  @apply !bg-secondary text-copy;
 }
 
 .cost {
-  @apply bg-red-500 text-white lowercase;
+  @apply !bg-accent text-copy;
 }
-
-

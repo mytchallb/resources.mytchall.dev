@@ -1,30 +1,34 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import ResourceList from "../components/ResourceList.vue";
+import Nav from "../components/Nav.vue";
+import Sidebar from "../components/Sidebar.vue";
 
-import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
-import ResourceList from '../components/ResourceList.vue';
-import Nav from '../components/Nav.vue';
-import Sidebar from '../components/Sidebar.vue';
+const resources = await getCollection("resources");
 
-const resources = await getCollection('resources');
-
-let categories = resources.map((resource) => resource.data.category ?? 'Unset');
-let uniqueCategories = [...new Set(categories)].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+let categories = resources.map((resource) => resource.data.category ?? "Unset");
+let uniqueCategories = [...new Set(categories)].sort((a, b) =>
+  a.toLowerCase().localeCompare(b.toLowerCase())
+);
 let categoriesWithCount = uniqueCategories.map((category) => ({
-	name: category,
-	count: categories.filter((c) => c === category).length
+  name: category,
+  count: categories.filter((c) => c === category).length,
 }));
-
 ---
 
 <Layout>
-
-	<div class="flex h-full w-full">
-	<Sidebar categories={categoriesWithCount} client:load />
-		<div class="flex-1 flex flex-col">
-			<Nav client:load />
-			<ResourceList categories={categoriesWithCount} resources={resources} client:load />
-		</div>
-	</div>
-
+  <div class="flex h-full w-full" id="app">
+    <Sidebar categories={categoriesWithCount} client:load />
+    <div class="flex-1 flex flex-col">
+      <Nav client:load />
+      <ResourceList
+        categories={categoriesWithCount}
+        resources={resources}
+        client:load
+      />
+    </div>
+  </div>
 </Layout>
+
+<script></script>

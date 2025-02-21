@@ -1,6 +1,6 @@
 ---
 title: "Fuse.js"
-tags: ["js"]
+tags: ["js", "script"]
 image: "/images/fusejs.webp"
 category: "search"
 url: "https://www.fusejs.io/"
