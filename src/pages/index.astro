@@ -2,13 +2,13 @@
 
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
-import ToolList from '../components/ToolList.vue';
-import Filters from '../components/Filters.vue';
+import ResourceList from '../components/ResourceList.vue';
+import Nav from '../components/Nav.vue';
 import Sidebar from '../components/Sidebar.vue';
 
-const tools = await getCollection('tools');
+const resources = await getCollection('resources');
 
-let categories = tools.map((tool) => tool.data.category ?? 'Unset');
+let categories = resources.map((resource) => resource.data.category ?? 'Unset');
 let uniqueCategories = [...new Set(categories)].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 let categoriesWithCount = uniqueCategories.map((category) => ({
 	name: category,
@@ -22,8 +22,8 @@ let categoriesWithCount = uniqueCategories.map((category) => ({
 	<div class="flex h-full w-full">
 	<Sidebar categories={categoriesWithCount} client:load />
 		<div class="flex-1 flex flex-col">
-			<Filters client:load />
-			<ToolList tools={tools} client:load />
+			<Nav client:load />
+			<ResourceList categories={categoriesWithCount} resources={resources} client:load />
 		</div>
 	</div>
 

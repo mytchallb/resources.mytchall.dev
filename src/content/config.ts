@@ -1,7 +1,7 @@
 // src/content/config.js
 import { defineCollection, z } from 'astro:content';
 
-const toolsCollection = defineCollection({
+const resourcesCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
@@ -15,8 +15,8 @@ const toolsCollection = defineCollection({
   })
 });
 
-export const collections = {
-  'tools': toolsCollection,
+export const resources = {
+  'resources': resourcesCollection,
 };
 
 

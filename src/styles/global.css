@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+
+.tag {
+  @apply capitalize whitespace-nowrap text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-md;
+}
+
+.url {
+  @apply bg-blue-500 text-white lowercase;
+}
+
+.pricing {
+  @apply bg-green-500 text-white ;
+}
+
+.cost {
+  @apply bg-red-500 text-white lowercase;
+}
+
+

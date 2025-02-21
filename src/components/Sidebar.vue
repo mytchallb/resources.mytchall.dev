@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full shadow-md transition-all duration-300 relative bg-gray-600 px-2 py-6" 
+  <div class="h-full shadow-md transition-all duration-300 relative bg-gray-600 px-2 py-10" 
        :class="[isOpen ? 'w-[160px]' : 'w-[30px]']">
     
     <button 
@@ -26,9 +26,23 @@
       <li v-for="category in categories" 
           :key="category.name" 
           class="cursor-pointer hover:bg-gray-500 rounded-md p-2 relative whitespace-nowrap overflow-hidden">
-        <div class="transition-opacity duration-300" :class="{ 'opacity-0': !isOpen }">
-          <span class="capitalize">{{ category.name }}</span>
-          <span v-if="category.count" class="text-gray-400">({{ category.count }})</span>
+        <div class="flex items-center gap-2 transition-opacity duration-300" :class="{ 'opacity-0': !isOpen }">
+          <svg 
+            class="flex-shrink-0 w-5 h-5 text-gray-300"
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="2"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <div class="flex items-center gap-1 flex-1 justify-between">
+            <span class="capitalize text-gray-200">{{ category.name }}</span>
+            <span v-if="category.count" class="text-sm px-2 py-0.5 bg-gray-500 text-gray-300 rounded-full">
+              {{ category.count }}
+            </span>
+          </div>
         </div>
       </li>
     </ul>

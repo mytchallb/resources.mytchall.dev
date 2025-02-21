@@ -1,6 +1,6 @@
 ---
 title: "Statamic"
-tags: [""]
+tags: ["source-available", "american"]
 image: "/images/statamic.webp"
 category: "cms"
 url: "https://statamic.com"
