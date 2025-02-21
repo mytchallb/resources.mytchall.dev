@@ -1,5 +1,5 @@
 ---
-title: "Great tool"
+title: "Great tools man!"
 tags: ["Productivity"]
 ---
 
