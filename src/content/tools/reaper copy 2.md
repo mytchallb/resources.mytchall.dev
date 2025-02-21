@@ -1,5 +1,5 @@
 ---
-title: "Hello sean!"
+title: "gr8"
 category: "audio"
 tags: ["Productivity"]
 url: ""
