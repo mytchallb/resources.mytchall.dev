@@ -1,26 +1,30 @@
 ---
 import "../styles/global.css";
 ---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Dev Resources</title>
-		<meta name="description" content="A free collection of various tools for developers and content creators.">
-	</head>
-	<body class="bg-gray-500 h-screen fixed w-full top-0 left-0">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Dev Resources</title>
+    <meta
+      name="description"
+      content="A free collection of various tools for developers and content creators."
+    />
+  </head>
+  <body class="bg-gray-500 h-screen w-full overflow-hidden">
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
