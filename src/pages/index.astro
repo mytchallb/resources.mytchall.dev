@@ -20,6 +20,10 @@ let tags = resources.flatMap((resource) => resource.data.tags ?? []);
 let uniqueTags = [...new Set(tags)].sort((a, b) =>
   a.toLowerCase().localeCompare(b.toLowerCase())
 );
+// remove hardcoded tags
+uniqueTags = uniqueTags.filter(
+  (tag) => !["free", "freemium", "open-source"].includes(tag)
+);
 ---
 
 <Layout>

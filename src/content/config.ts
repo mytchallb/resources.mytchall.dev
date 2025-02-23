@@ -11,6 +11,7 @@ const resourcesCollection = defineCollection({
     url: z.string().optional(),
     cost: z.string().optional(),
     excerpt: z.string().optional(),
+    date: z.string().optional(),
     pricing: z.string().optional(),
   })
 });

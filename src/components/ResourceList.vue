@@ -1,26 +1,15 @@
 <template>
   <div class="w-full h-full overflow-y-auto bg-background">
-    <div
-      v-for="category in filteredCategories"
-      :key="category.name"
-      class="p-4"
-    >
-      <div class="flex items-center justify-between">
-        <hr class="w-full border-2 border-secondary" />
-        <h2 class="text-xl mx-6 text-secondary font-bold uppercase mb-2">
-          {{ category.name }}
-        </h2>
-        <hr class="w-full border-2 border-secondary" />
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-        <template v-for="resource in resources">
-          <ResourceCard
-            v-if="resource.data.category === category.name"
-            :resource="resource"
-            :key="resource.slug"
-          />
-        </template>
-      </div>
+    <div class="grid auto-fit-grid gap-x-4 gap-y-6 p-6">
+      <template
+        v-for="item in resources"
+        :key="item.resource?.slug || item.categoryName"
+      >
+        <ResourceCard
+          :resource="item.resource"
+          :categoryName="item.categoryName"
+        />
+      </template>
     </div>
   </div>
 </template>
@@ -29,12 +18,19 @@
 import { computed } from "vue";
 import ResourceCard from "./ResourceCard.vue";
 import { useStore } from "@nanostores/vue";
-import { selectedCategories } from "../store/store";
+import {
+  selectedCategories,
+  sortBy,
+  selectedTags,
+  searchQuery,
+} from "../store/store";
 
 const props = defineProps(["resources", "categories"]);
 
 const $selectedCategories = useStore(selectedCategories);
-
+const $sortBy = useStore(sortBy);
+const $selectedTags = useStore(selectedTags);
+const $searchQuery = useStore(searchQuery);
 const filteredCategories = computed(() => {
   if ($selectedCategories.value.length === 0) {
     return props.categories;
@@ -44,4 +40,99 @@ const filteredCategories = computed(() => {
     return $selectedCategories.value.includes(category.name);
   });
 });
+
+const resources = computed(() => {
+  let result = [];
+
+  // get a list of resources and selected categories
+  filteredCategories.value.forEach((category) => {
+    const categoryResources = props.resources.filter(
+      (resource) => resource.data.category === category.name
+    );
+
+    if (categoryResources.length > 0) {
+      let addedCategory = false;
+
+      categoryResources.forEach((resource) => {
+        if (!addedCategory) {
+          result.push({ categoryName: category.name, resource });
+          addedCategory = true;
+        } else {
+          result.push({ categoryName: "", resource });
+        }
+      });
+    }
+  });
+
+  // sort the resources by the sortBy value
+  result.sort((a, b) => {
+    switch ($sortBy.value) {
+      case "category-asc":
+        return a.categoryName.localeCompare(b.categoryName);
+      case "category-desc":
+        return b.categoryName.localeCompare(a.categoryName);
+      case "a-z":
+        return a.resource.data.title.localeCompare(b.resource.data.title);
+      case "z-a":
+        return b.resource.data.title.localeCompare(a.resource.data.title);
+      case "new-old":
+        const dateB = b.resource.data.date
+          ? new Date(b.resource.data.date).getTime()
+          : 0;
+        const dateA = a.resource.data.date
+          ? new Date(a.resource.data.date).getTime()
+          : 0;
+        return dateB - dateA;
+      case "old-new":
+        const dateB2 = b.resource.data.date
+          ? new Date(b.resource.data.date).getTime()
+          : 0;
+        const dateA2 = a.resource.data.date
+          ? new Date(a.resource.data.date).getTime()
+          : 0;
+        return dateA2 - dateB2;
+    }
+  });
+
+  // filter the resources by the searchQuery value
+  result = result.filter((item) => {
+    if ($searchQuery.value === "") {
+      return true;
+    }
+    const searchTerm = $searchQuery.value.toLowerCase();
+    const title = item.resource.data.title.toLowerCase();
+    const excerpt = (item.resource.data.excerpt || "").toLowerCase();
+
+    return title.includes(searchTerm) || excerpt.includes(searchTerm);
+  });
+
+  // filter the resources by the selectedTags value
+  result = result.filter((item) => {
+    if ($selectedTags.value.length === 0) {
+      return true;
+    }
+
+    return $selectedTags.value.every((selectedTag) => {
+      // Handle special pricing tags
+      if (selectedTag === "free") {
+        return item.resource.data.pricing === "free";
+      }
+      if (selectedTag === "freemium") {
+        return item.resource.data.pricing === "freemium";
+      }
+      // Handle regular tags
+      return item.resource.data.tags.includes(selectedTag);
+    });
+  });
+
+  console.log("result", result);
+  return result;
+});
 </script>
+
+<style>
+.auto-fit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+</style>
