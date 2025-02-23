@@ -3,7 +3,7 @@
     <InnerNav :tags="tags" class="sticky top-0 bg-background z-20" />
     <div class="grid auto-fit-grid gap-x-4 gap-y-6 px-6 pt-2 pb-6">
       <template v-for="item in resources" :key="item.resource?.slug || item.categoryName">
-        <ResourceCard :resource="item.resource" :categoryName="item.categoryName" />
+        <ResourceCard :resource="item.resource" />
       </template>
       <span class="text-copy text-center text-sm mt-10" v-if="resources.length === 0">No resources found</span>
     </div>
@@ -114,6 +114,14 @@ const resources = computed(() => {
 <style>
 .auto-fit-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.auto-fit-grid > * {
+  max-width: 500px;
+  justify-self: center;
+  width: 100%;
 }
 </style>
