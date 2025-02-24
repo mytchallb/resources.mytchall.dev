@@ -1,26 +1,5 @@
 <template>
-  <div class="h-full shadow-md transition-all duration-300 relative bg-primary py-4" :class="[$isOpen ? 'w-[160px] px-2' : 'w-[10px] px-1']">
-    <button
-      @click="toggleSidebar"
-      class="cursor-pointer absolute -right-2 top-2 p-1 bg-secondary hover:bg-accent text-copy shadow-md rounded z-20"
-      :class="{ 'rotate-180 translate-x-2': !$isOpen }"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <polyline points="15 18 9 12 15 6" />
-        <polyline points="11 18 5 12 11 6" />
-      </svg>
-    </button>
-
+  <div class="h-full shadow-md transition-all duration-300 relative bg-primary py-4" :class="[$isOpen ? 'w-[160px] px-2' : 'w-[0px]']">
     <h1 class="text-xl mb-4 px-4 font-bold overflow-hidden">
       <div class="transition-opacity duration-300 text-copy" :class="{ 'opacity-0': !$isOpen }">Dev Resources</div>
     </h1>
@@ -90,10 +69,5 @@ const clickCategory = (category) => {
     selectedCategories.set([...currentCategories, category])
   }
   console.log("selectedCategories", selectedCategories.get())
-}
-
-const toggleSidebar = () => {
-  console.log("toggleSidebar")
-  isSidebarOpen.set(!isSidebarOpen.get())
 }
 </script>

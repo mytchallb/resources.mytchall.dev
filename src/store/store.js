@@ -1,6 +1,6 @@
 import { atom } from "nanostores"
 
-export const isSidebarOpen = atom(true)
+export const isSidebarOpen = atom(false)
 
 export const selectedCategories = atom([])
 export const selectedTags = atom([])
