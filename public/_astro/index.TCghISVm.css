@@ -1,0 +1,1 @@
+.scrollbar-hide{-ms-overflow-style:none;scrollbar-width:none}.scrollbar-hide::-webkit-scrollbar{display:none}.auto-fit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));max-width:1600px;margin:0 auto}.auto-fit-grid>*{max-width:500px;justify-self:center;width:100%}

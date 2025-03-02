@@ -8,7 +8,8 @@ import tailwindcss from "@tailwindcss/vite"
 // https://astro.build/config
 export default defineConfig({
   integrations: [vue()],
-
+  publicDir: "static",
+  outDir: "public",
   vite: {
     plugins: [tailwindcss()],
   },
