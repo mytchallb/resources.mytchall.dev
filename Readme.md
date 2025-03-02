@@ -2,7 +2,7 @@
 
 A website front-end to display collection of web resources for the full-stack developer or content creator.
 
-Access the website [here on my blog](https://resources.mytchall.dev/), host your own copy, or see the list of assets [here on Github](Resources.md).
+Access the website [here on my blog](https://resources.mytchall.dev/), host your own copy, or see the list of assets [here on Github](./Resources.md).
 
 ## Development
 

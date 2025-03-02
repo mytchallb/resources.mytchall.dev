@@ -4,9 +4,10 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "npm run create-contents && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "create-contents": "node createResourceContents.js"
   },
   "dependencies": {
     "@astrojs/vue": "^5.0.6",
