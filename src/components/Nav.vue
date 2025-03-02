@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-secondary p-2 pl-6 w-full flex flex-col">
+  <div class="bg-secondary py-2 w-full flex flex-col">
     <!-- tags -->
     <div class="">
       <NavTags :tags="props.tags" />

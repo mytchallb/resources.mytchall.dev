@@ -20,6 +20,7 @@
         <img :src="github.src" alt="github" class="w-7 h-7" />
       </a>
     </div>
+    <!-- Categories -->
     <ul class="flex flex-col gap-1 transition-opacity duration-300" :class="{ 'opacity-0 pointer-events-none': !$isOpen }">
       <li
         v-for="category in categories"
@@ -29,9 +30,6 @@
         @click="clickCategory(category.name)"
       >
         <div class="flex items-center gap-2">
-          <svg class="flex-shrink-0 w-5 h-5 text-copy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
           <div class="flex items-center gap-1 flex-1 justify-between">
             <span class="capitalize text-copy">{{ category.name }}</span>
             <span

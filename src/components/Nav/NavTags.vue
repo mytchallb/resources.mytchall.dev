@@ -1,7 +1,7 @@
 <template>
   <div class="flex-1 min-w-0">
     <div class="flex flex-col gap-1">
-      <div class="overflow-x-auto scrollbar-hide">
+      <div class="overflow-x-auto scrollbar-hide px-4">
         <div class="flex flex-col gap-1">
           <div class="flex gap-1">
             <span

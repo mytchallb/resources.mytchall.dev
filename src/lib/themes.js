@@ -18,11 +18,11 @@ export const themes = [
   {
     name: "dark",
     colors: {
-      primary: "#9ca36d",
-      secondary: "#8b936e",
-      background: "#1a1a1a",
-      accent: "#a17a52",
-      accentSecondary: "#8d7660",
+      primary: "#232849",
+      secondary: "#373c53",
+      background: "#141718",
+      accent: "#136549",
+      accentSecondary: "#468e5d",
       copy: "#e6e6e6",
       free: "#6ca36e",
       paid: "#a36e6e",
@@ -31,4 +31,4 @@ export const themes = [
       tag2: "#4b5563",
     },
   },
-];
+]
