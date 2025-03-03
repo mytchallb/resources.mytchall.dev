@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-full overflow-y-auto bg-background">
-    <InnerNav :tags="tags" class="sticky top-0 bg-background z-20" />
+    <InnerNav :tags="tags" class="bg-background z-10" />
     <div class="grid auto-fit-grid gap-4 px-6 pt-2 pb-6">
       <template v-for="item in resources" :key="item.resource?.slug || item.categoryName">
         <ResourceCard :resource="item.resource" />

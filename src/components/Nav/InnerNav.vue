@@ -1,8 +1,8 @@
 <template>
-  <div class="fixed flex gap-2 justify-between items-center w-full py-1 px-2">
+  <div class="flex gap-2 justify-between items-center w-full py-1 px-2">
     <div class="flex items-center gap-2">
       <!-- Open Nav button -->
-      <button class="cursor-pointer" @click="toggleSidebar">
+      <button class="cursor-pointer lg:hidden" @click="toggleSidebar">
         <svg class="flex-shrink-0 w-7 h-7 text-copy stroke-secondary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>

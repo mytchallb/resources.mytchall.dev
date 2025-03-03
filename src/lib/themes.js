@@ -16,7 +16,7 @@ export const themes = [
     },
   },
   {
-    name: "dark",
+    name: "midnight",
     colors: {
       primary: "#232849",
       secondary: "#373c53",

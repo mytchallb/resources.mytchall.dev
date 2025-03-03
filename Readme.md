@@ -20,14 +20,18 @@ Please feel free to add your own resources and make a pull request!
 
 ## To do
 
-- [ ] Make color scheme save across pages
-- [ ] Make sidebar visible on desktop, then open on click
-- [ ] Click outside sidebar to close
-- [ ] Support multi-images
-- [ ] Update URL when filtering
-- [ ] Transform images on build
-- [ ] Add some colour themes
+- Check mobile UI view
+
+- Support multi-images on single view
+
+- Update URL when filtering
+
+- Add some colour themes
+- Make color scheme save across pages
+- Announce on blog
 
 ### Ideas
 
 Could make a simple Astro front-end to generate resource .md files with a nice drag/drop layout.
+
+Transform images on build
