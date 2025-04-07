@@ -15,13 +15,14 @@
         <!-- Theme switcher -->
         <div class="h-[30px] w-[30px] aspect-square">
           <button class="w-full h-full rounded-md flex overflow-hidden cursor-pointer border-2 border-[#808080]" @click="cycleTheme">
-            <span class="bg-primary flex-1"></span>
-            <span class="bg-secondary flex-1"></span>
-            <span class="bg-accent flex-1"></span>
-            <span class="bg-accent-secondary flex-1"></span>
-            <span class="bg-copy flex-1"></span>
+            <div class="bg-primary flex-1 h-full"></div>
+            <div class="bg-secondary flex-1 h-full"></div>
+            <div class="bg-accent flex-1 h-full"></div>
+            <div class="bg-accent-secondary flex-1 h-full"></div>
+            <div class="bg-copy flex-1 h-full"></div>
           </button>
         </div>
+
         <!-- Github -->
         <a href="https://github.com/mytchallb/resources.mytchall.dev" target="_blank">
           <img :src="github.src" alt="github" class="w-7 h-7" />

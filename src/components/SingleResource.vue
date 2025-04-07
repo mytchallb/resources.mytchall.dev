@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full min-h-screen overflow-y-auto flex flex-col justify-between">
+  <div class="w-full h-full overflow-y-auto flex flex-col justify-between">
     <div>
       <!-- Nav -->
       <div class="w-full">
