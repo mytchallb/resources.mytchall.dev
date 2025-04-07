@@ -6,6 +6,10 @@ export const applyThemeIndexToDom = (themeIndex) => {
   body.classList.remove(...Array.from(body.classList).filter((className) => className.startsWith("theme-")))
   // Add the new theme class
   body.classList.add(`theme-${themeIndex}`)
+
+  // Get the theme color from the theme index
+  const themeColor = getComputedStyle(document.documentElement).getPropertyValue("--color-secondary")
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", themeColor)
 }
 
 export const cycleTheme = () => {

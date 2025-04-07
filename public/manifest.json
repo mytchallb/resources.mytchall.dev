@@ -55,6 +55,5 @@
   ],
   "start_url": "/",
   "display": "fullscreen",
-  "background_color": "#ffffff",
-  "theme_color": "#000000"
+  "background_color": "#ffffff"
 }
