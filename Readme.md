@@ -25,3 +25,5 @@ Please feel free to make a pull request, add your own resources, edit existing o
 Could make a simple Astro front-end to generate resource .md files with a nice drag/drop layout.
 
 Transform images on build with unique filename
+
+Could make this a SPA with router, so no page reloading + would remember scroll position on going back a page.

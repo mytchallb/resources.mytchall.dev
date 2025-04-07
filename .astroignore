@@ -1,0 +1,9 @@
+# Ignore specific routes
+src/pages/ignore-me/**
+src/pages/drafts/**
+
+# Ignore test files
+**/*.test.astro
+**/*.spec.astro
+
+# Add more patterns as needed 

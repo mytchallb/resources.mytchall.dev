@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import AddScreen from "../../components/Add/AddScreen.vue"
+
+if (!import.meta.env.DEV && typeof window !== "undefined") {
+  window.location.href = "/"
+}
+---
+
+<Layout>
+  <AddScreen client:load />
+</Layout>
+
+<script>
+  // Client-side redirect for production
+  if (!import.meta.env.DEV) {
+    window.location.href = "/"
+  }
+</script>
