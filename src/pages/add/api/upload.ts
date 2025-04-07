@@ -26,7 +26,7 @@ export const POST: APIRoute = async ({ request }) => {
     // Generate a unique filename
     const extension = path.extname(file.name)
     const filename = `${uuidv4()}${extension}`
-    const uploadPath = path.join(process.cwd(), "public/images", filename)
+    const uploadPath = path.join(process.cwd(), "static/images", filename)
 
     // Convert File to Buffer
     const arrayBuffer = await file.arrayBuffer()
