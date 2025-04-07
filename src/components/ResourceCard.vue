@@ -36,7 +36,7 @@ import { computed } from "vue"
 import { simpleUrl } from "../lib/utils"
 const props = defineProps(["resource"])
 
-console.log(props.resource)
+// console.log(props.resource)
 
 const tags = computed(() => {
   let group = []

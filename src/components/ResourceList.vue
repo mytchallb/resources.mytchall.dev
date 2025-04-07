@@ -11,11 +11,12 @@
 </template>
 
 <script setup>
-import { computed } from "vue"
+import { computed, onMounted } from "vue"
 import ResourceCard from "./ResourceCard.vue"
 import { useStore } from "@nanostores/vue"
 import { selectedCategories, sortBy, selectedTags, searchQuery } from "../store/store"
 import InnerNav from "./Nav/InnerNav.vue"
+import { applyUrlParamsToStore } from "../lib/methods"
 const props = defineProps(["resources", "categories", "tags"])
 
 const $selectedCategories = useStore(selectedCategories)
@@ -30,6 +31,11 @@ const filteredCategories = computed(() => {
   return props.categories.filter((category) => {
     return $selectedCategories.value.includes(category.name)
   })
+})
+
+onMounted(() => {
+  console.log("onMounted")
+  applyUrlParamsToStore()
 })
 
 const resources = computed(() => {
@@ -106,7 +112,7 @@ const resources = computed(() => {
     })
   })
 
-  console.log("result", result)
+  // console.log("result", result)
   return result
 })
 </script>

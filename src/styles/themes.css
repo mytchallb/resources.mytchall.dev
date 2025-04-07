@@ -12,7 +12,7 @@
   --color-theme-accent: #a7d3c8;
   --color-theme-accentSecondary: #b5e6da;
   --color-theme-copy: #4a4a4a;
-
+  --color-theme-logo: #33643b;
   /* Price tag colors */
   --color-theme-free: #7cb37d; /* A gentle green */
   --color-theme-paid: #b37d7d; /* A soft red */
@@ -31,6 +31,7 @@
   --color-theme-accent: #136549;
   --color-theme-accentSecondary: #468e5d;
   --color-theme-copy: #e6e6e6;
+  --color-theme-logo: #474e7d;
 
   --color-theme-free: #6ca36e;
   --color-theme-paid: #a36e6e;

@@ -10,6 +10,7 @@
   --color-accent: var(--color-theme-accent);
   --color-accent-secondary: var(--color-theme-accentSecondary);
   --color-copy: var(--color-theme-copy);
+  --color-logo: var(--color-theme-logo);
 
   --color-free: var(--color-theme-free);
   --color-paid: var(--color-theme-paid);

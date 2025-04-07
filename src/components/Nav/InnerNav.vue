@@ -55,15 +55,23 @@
   </div>
 </template>
 <script setup>
-import { ref, onMounted } from "vue"
+import { ref, onMounted, watch } from "vue"
 
-import { resetFilters, searchQuery, sortBy } from "../../store/store"
+import { resetFilters, searchQuery, sortBy, setSearchQuery, setSortBy } from "../../store/store"
 import { useStore } from "@nanostores/vue"
 import { isSidebarOpen } from "../../store/store"
 
 const $searchQuery = useStore(searchQuery)
 const $sortBy = useStore(sortBy)
 const searchInput = ref(null)
+
+watch($searchQuery, (newVal) => {
+  setSearchQuery(newVal)
+})
+
+watch($sortBy, (newVal) => {
+  setSortBy(newVal)
+})
 
 const props = defineProps(["tags"])
 

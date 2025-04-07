@@ -8,7 +8,7 @@
     <!-- Contents -->
     <div class="relative z-30">
       <h1 class="text-xl mb-4 px-4 font-bold overflow-hidden relative">
-        <div class="text-copy">Dev Resources</div>
+        <IconLogo />
       </h1>
       <!-- Buttons -->
       <div class="flex gap-4 my-4 items-center justify-center overflow-hidden">
@@ -56,10 +56,11 @@
 
 <script setup>
 import { ref } from "vue"
+import IconLogo from "./Icons/IconLogo.vue"
 import github from "../assets/logo-github.svg"
 import { useStore } from "@nanostores/vue"
 import { cycleTheme, applyThemeIndexToDom } from "../lib/methods"
-import { isSidebarOpen, selectedCategories, selectedTheme } from "../store/store"
+import { isSidebarOpen, selectedCategories, selectedTheme, setCategories } from "../store/store"
 import { onMounted } from "vue"
 
 const props = defineProps(["categories"])
@@ -81,9 +82,9 @@ const clickCategory = (category) => {
 
   const currentCategories = selectedCategories.get()
   if (currentCategories.includes(category)) {
-    selectedCategories.set(currentCategories.filter((c) => c !== category))
+    setCategories(currentCategories.filter((c) => c !== category))
   } else {
-    selectedCategories.set([...currentCategories, category])
+    setCategories([...currentCategories, category])
   }
   console.log("selectedCategories", selectedCategories.get())
 }

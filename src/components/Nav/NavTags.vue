@@ -34,7 +34,7 @@
 <script setup>
 import { ref } from "vue"
 import { useStore } from "@nanostores/vue"
-import { selectedTags } from "../../store/store"
+import { selectedTags, setTags } from "../../store/store"
 const $selectedTags = useStore(selectedTags)
 
 const props = defineProps(["tags"])
@@ -45,9 +45,9 @@ const selectTag = (tag) => {
   console.log("clicked tag", tag)
   const currentTags = selectedTags.get()
   if (currentTags.includes(tag)) {
-    selectedTags.set(currentTags.filter((t) => t !== tag))
+    setTags(currentTags.filter((t) => t !== tag))
   } else {
-    selectedTags.set([...currentTags, tag])
+    setTags([...currentTags, tag])
   }
   console.log("selectedTags", selectedTags.get())
 }
