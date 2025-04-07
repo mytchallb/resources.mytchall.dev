@@ -62,8 +62,11 @@ async function createResourceContents() {
   }
   output += "## Categories\n\n"
 
+  // Sort categories alphabetically
+  const sortedCategories = Array.from(categoryMap.keys()).sort((a, b) => a.localeCompare(b))
+
   // Add category links
-  for (const category of categoryMap.keys()) {
+  for (const category of sortedCategories) {
     const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1)
     output += `- [${capitalizedCategory}](#${category.toLowerCase()})\n`
   }
@@ -71,13 +74,13 @@ async function createResourceContents() {
   output += "\n"
 
   // Add resources by category
-  for (const [category, resources] of categoryMap) {
+  for (const category of sortedCategories) {
     const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1)
     output += `## ${capitalizedCategory}\n\n`
     // Sort resources alphabetically by title
-    const sortedResources = resources.sort((a, b) => a.title.localeCompare(b.title))
+    const sortedResources = categoryMap.get(category).sort((a, b) => a.title.localeCompare(b.title))
     for (const resource of sortedResources) {
-      output += `- [${resource.title}](${resource.url}) - ${resource.excerpt}\n`
+      output += `- [${resource.title}](${resource.url}) - ${resource.excerpt}\n\n`
     }
     output += "\n"
   }

@@ -1,7 +1,7 @@
 ---
 title: "Statamic"
 tags: ["source-available", "php"]
-image: "/images/statamic.webp"
+images: ["/images/statamic.webp"]
 category: "cms"
 url: "https://statamic.com"
 cost: "$0 - $275 usd"

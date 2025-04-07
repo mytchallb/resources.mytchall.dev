@@ -13,7 +13,7 @@
       <!-- Buttons -->
       <div class="flex gap-4 my-4 items-center justify-center overflow-hidden">
         <!-- Theme switcher -->
-        <div class="h-full w-[30px] aspect-square">
+        <div class="h-[30px] w-[30px] aspect-square">
           <button class="w-full h-full rounded-md flex overflow-hidden cursor-pointer border-2 border-[#808080]" @click="cycleTheme">
             <span class="bg-primary flex-1"></span>
             <span class="bg-secondary flex-1"></span>
@@ -58,13 +58,19 @@
 import { ref } from "vue"
 import github from "../assets/logo-github.svg"
 import { useStore } from "@nanostores/vue"
-import { cycleTheme } from "../lib/methods"
-import { isSidebarOpen, selectedCategories } from "../store/store"
+import { cycleTheme, applyThemeIndexToDom } from "../lib/methods"
+import { isSidebarOpen, selectedCategories, selectedTheme } from "../store/store"
+import { onMounted } from "vue"
 
 const props = defineProps(["categories"])
 const $isOpen = useStore(isSidebarOpen)
 const $selectedCategories = useStore(selectedCategories)
+const $selectedTheme = useStore(selectedTheme)
 
+onMounted(() => {
+  console.log("selectedTheme", selectedTheme.get())
+  // applyThemeIndexToDom(selectedTheme.get())
+})
 const toggleSidebar = () => {
   console.log("toggleSidebar")
   isSidebarOpen.set(!isSidebarOpen.get())

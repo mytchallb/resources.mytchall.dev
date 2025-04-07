@@ -1,7 +1,7 @@
 ---
 title: "Fuse.js"
 tags: ["js", "script"]
-image: "/images/fusejs.webp"
+images: ["/images/fusejs.webp", "/images/bruno.webp", "/images/umami.jpg", "/images/umami.jpg", "/images/umami.jpg"]
 category: "search"
 url: "https://www.fusejs.io/"
 cost: ""

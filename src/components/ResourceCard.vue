@@ -1,8 +1,8 @@
 <template>
   <div class="relative">
-    <div v-if="resource" class="bg-background border border-secondary shadow-md rounded-md overflow-hidden h-full">
+    <div v-if="resource" class="bg-background/85 border border-secondary shadow-md rounded-md overflow-hidden h-full">
       <a :href="'/resources/' + resource.slug">
-        <img :src="resource.data.image" :alt="resource.data.title" class="w-full aspect-video object-cover shadow-md" />
+        <img :src="resource.data.images[0]" :alt="resource.data.title" class="w-full aspect-video object-cover shadow-md" />
       </a>
       <div class="flex gap-2 flex-col p-4">
         <h2 class="text-lg font-bold text-copy">{{ resource.data.title }}</h2>
@@ -33,16 +33,10 @@
 </template>
 <script setup>
 import { computed } from "vue"
-
+import { simpleUrl } from "../lib/utils"
 const props = defineProps(["resource"])
 
 console.log(props.resource)
-
-const simpleUrl = (url) => {
-  let simpleUrl = url.replace("https://", "").replace("http://", "").replace("www.", "")
-  simpleUrl = simpleUrl.replace(/\/$/, "")
-  return simpleUrl.length > 30 ? simpleUrl.slice(0, 30) + "..." : simpleUrl
-}
 
 const tags = computed(() => {
   let group = []

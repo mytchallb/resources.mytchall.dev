@@ -1,0 +1,41 @@
+/* Colour Themes */
+
+:root {
+  --max-themes: 2;
+}
+
+/* Sky Forest */
+:root:has(.theme-0) {
+  --color-theme-primary: #8cc796;
+  --color-theme-secondary: #7db389;
+  --color-theme-background: #e0fef0;
+  --color-theme-accent: #a7d3c8;
+  --color-theme-accentSecondary: #b5e6da;
+  --color-theme-copy: #4a4a4a;
+
+  /* Price tag colors */
+  --color-theme-free: #7cb37d; /* A gentle green */
+  --color-theme-paid: #b37d7d; /* A soft red */
+  --color-theme-freemium: #7d95b3; /* A muted blue */
+
+  /* General tag colors */
+  --color-theme-tag-1: #7f91b1; /* Base tag color */
+  --color-theme-tag-2: #a5b7d4; /* Slightly darker variant */
+}
+
+/* Midnight */
+:root:has(.theme-1) {
+  --color-theme-primary: #232849;
+  --color-theme-secondary: #373c53;
+  --color-theme-background: #141718;
+  --color-theme-accent: #136549;
+  --color-theme-accentSecondary: #468e5d;
+  --color-theme-copy: #e6e6e6;
+
+  --color-theme-free: #6ca36e;
+  --color-theme-paid: #a36e6e;
+  --color-theme-freemium: #6e82a3;
+
+  --color-theme-tag-1: #6b7280;
+  --color-theme-tag-2: #4b5563;
+}

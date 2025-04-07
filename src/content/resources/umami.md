@@ -23,7 +23,7 @@ tags:
     "traffic-analysis",
     "user-behavior",
   ]
-image: "/images/umami.jpg"
+images: ["/images/umami.jpg"]
 category: "analytics"
 url: "https://umami.is"
 date: "2024-02-23T02:14:02.184Z"
