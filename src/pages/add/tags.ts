@@ -2,7 +2,7 @@ import type { APIRoute } from "astro"
 import fs from 'node:fs'
 import matter from 'gray-matter'
 
-export const prerender = false
+
 
 export const GET: APIRoute = async () => {
   const allTags = new Set<string>()

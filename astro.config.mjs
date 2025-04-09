@@ -12,9 +12,12 @@ export default defineConfig({
   publicDir: "static",
   outDir: "public",
   output: (process.env.ASTRO_SSR || "false") === "true" ? "server" : "static",
-  adapter: node({
-    mode: "standalone",
-  }),
+  adapter:
+    (process.env.ASTRO_SSR || "false") === "true"
+      ? node({
+          mode: "standalone",
+        })
+      : undefined,
   vite: {
     plugins: [tailwindcss()],
   },

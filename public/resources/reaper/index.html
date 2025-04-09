@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-sckkx6r4> <head><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-WQDF9VCNHS"></script><script type="module">"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.3.0"><title>Dev Resources</title><meta name="description" content="A free collection of various tools for developers and content creators."><link rel="manifest" href="/manifest.json"><link rel="apple-touch-icon" href="/icons/icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="stylesheet" href="/_astro/index.DtYEu317.css"></head> <body class="h-screen w-full overflow-hidden" data-astro-cid-sckkx6r4> <!-- Set up theme --> <script type="module">const e=localStorage.getItem("selectedTheme")||0;document.body.classList.add(`theme-${e}`);</script> <!-- App Content -->  <div class="flex flex-col h-full w-full overflow-hidden bg-background"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z5xqiG" prefix="v0" component-url="/_astro/SingleResource.FpOnfmXk.js" component-export="default" renderer-url="/_astro/client.C0157sCG.js" props="{&quot;resource&quot;:[0,{&quot;title&quot;:[0,&quot;Reaper&quot;],&quot;tags&quot;:[1,[[0,&quot;app&quot;]]],&quot;images&quot;:[1,[[0,&quot;/images/reaper.jpg&quot;]]],&quot;category&quot;:[0,&quot;audio&quot;],&quot;url&quot;:[0,&quot;https://www.reaper.fm/&quot;],&quot;cost&quot;:[0,&quot;$60 - $225 usd&quot;],&quot;pricing&quot;:[0,&quot;freemium&quot;],&quot;excerpt&quot;:[0,&quot;A digital audio app offering multitrack audio and MIDI recording, editing, processing, mixing and mastering.&quot;]}]}" ssr client="load" opts="{&quot;name&quot;:&quot;SingleResource&quot;,&quot;value&quot;:true}" await-children><div class="w-full h-full overflow-y-auto flex flex-col justify-between"><div><div class="w-full"><div class="w-full flex flex-row items-center justify-between p-2 max-w-screen-lg mx-auto"><div class="p-2"><svg class="w-6 h-6 cursor-pointer fill-copy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></div><span class="text-lg text-center font-bold">Dev Resources</span><span></span></div></div><div class="w-full flex flex-col items-center justify-center p-2"><div class="h-full lg:w-[75vw] max-w-[1200px]"><img class="aspect-video object-cover w-full h-full rounded-lg shadow-md" src="/images/reaper.jpg" alt=""></div></div><!----><div class="text-center flex flex-col gap-4 my-4"><h1 class="text-4xl text-center font-bold">Reaper</h1><div class="flex flex-col gap-2"><a href="https://www.reaper.fm/" class="text-sm text-center font-bold hover:underline">/reaper.fm</a><div class="w-full flex items-center justify-center gap-2 text-sm text-center font-bold"><span class="capitalize">freemium</span><span class="">-</span><span class="">$60 - $225 usd</span></div></div></div></div><div class="w-full max-w-screen-md mx-auto p-6 pt-0"><div class="prose"><!--[--><astro-slot name="content"><h2 id="wow">WOW</h2>
+<p>REAPER is a complete digital audio app, offering a full multitrack audio and MIDI recording, editing, processing, mixing and mastering toolset.</p>
+<p>REAPER supports a vast range of hardware, digital formats and plugins, and can be comprehensively extended, scripted and modified.</p>
+<hr>
+<h1 id="markdown-styling-showcase">Markdown Styling Showcase</h1>
+<h2 id="headings">Headings</h2>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<hr>
+<h2 id="emphasis">Emphasis</h2>
+<p><strong>Bold text</strong><br>
+<em>Italic text</em><br>
+<strong><em>Bold and italic</em></strong><br>
+<del>Strikethrough</del></p>
+<hr>
+<h2 id="lists">Lists</h2>
+<h3 id="unordered-list">Unordered List</h3>
+<ul>
+<li>Item 1
+<ul>
+<li>Nested Item</li>
+</ul>
+</li>
+<li>Item 2</li>
+</ul>
+<h3 id="ordered-list">Ordered List</h3>
+<ol>
+<li>First</li>
+<li>Second
+<ol>
+<li>Sub-item</li>
+<li>Sub-item</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2 id="links">Links</h2>
+<p><a href="https://openai.com">OpenAI</a></p>
+<hr>
+<h2 id="images">Images</h2>
+<p><img src="https://via.placeholder.com/150" alt="Alt text"></p>
+<hr>
+<h2 id="blockquotes">Blockquotes</h2>
+<blockquote>
+<p>This is a blockquote.<br>
+With multiple lines.</p>
+</blockquote>
+<hr>
+<h2 id="code">Code</h2>
+<p>Inline <code>code</code> example</p>
+<h3 id="code-block">Code Block</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="js"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#B392F0"> greet</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">name</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">`Hello, ${</span><span style="color:#E1E4E8">name</span><span style="color:#9ECBFF">}!`</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#B392F0">greet</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"World"</span><span style="color:#E1E4E8">)</span></span></code></pre></astro-slot><!--]--></div></div><div class="w-full flex flex-row items-center justify-center p-2 bg-secondary mt-20"><span class="text-sm text-center font-bold my-4">resources.mytchall.dev</span></div></div><!--astro:end--></astro-island> </div>  <!-- Service Worker --> <script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","G-WQDF9VCNHS");</script> </body>  </html>

@@ -3,8 +3,6 @@ import fs from "fs/promises"
 import path from "path"
 import { v4 as uuidv4 } from "uuid"
 
-export const prerender = false
-
 export const POST: APIRoute = async ({ request }) => {
   if (process.env.ASTRO_SSR !== "true") {
     return new Response("API endpoints are only available in SSR mode", { status: 403 })
