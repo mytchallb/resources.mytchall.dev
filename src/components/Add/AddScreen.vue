@@ -19,6 +19,7 @@
           </div>
 
           <div>
+            z
             <label for="excerpt" class="block text-sm font-medium text-gray-300">Excerpt</label>
             <textarea
               rows="3"
@@ -141,7 +142,7 @@
           <div>
             <label class="block text-sm font-medium text-gray-300">Images</label>
             <div class="mt-2 relative cursor-pointer" @dragover.prevent="dragOver" @dragleave.prevent="dragLeave" @drop.prevent="handleDrop">
-              <div class="flex justify-center px-6 pt-5 pb-6 border-2 border-gray-700 border-dashed rounded-md" :class="{ 'border-blue-500': isDragging }">
+              <div class="flex flex-col px-6 pt-5 pb-6 border-2 border-gray-700 border-dashed rounded-md" :class="{ 'border-blue-500': isDragging }">
                 <label for="file-upload" class="w-full cursor-pointer">
                   <div class="space-y-1 text-center">
                     <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
@@ -160,16 +161,27 @@
                   </div>
                   <input id="file-upload" type="file" class="sr-only" multiple accept="image/*" @change="handleFileSelect" />
                 </label>
-              </div>
-            </div>
-            <div v-if="uploadedImages.length > 0" class="mt-4 grid grid-cols-6 gap-2">
-              <div v-for="(image, index) in uploadedImages" :key="index" class="relative aspect-square">
-                <img :src="image.preview" class="w-full h-full object-cover rounded" />
-                <button type="button" @click="removeImage(index)" class="absolute top-1 right-1 bg-red-500 text-white rounded-full p-1">
-                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
+
+                <div v-if="uploadedImages.length > 0" class="mt-4">
+                  <div class="flex gap-2 overflow-x-auto pb-2" style="scrollbar-width: none; -ms-overflow-style: none">
+                    <div
+                      v-for="(image, index) in uploadedImages"
+                      :key="index"
+                      class="relative aspect-square flex-shrink-0 w-32 cursor-move"
+                      draggable="true"
+                      @dragstart="dragStart(index)"
+                      @dragover.prevent
+                      @drop.prevent="dropImage(index)"
+                    >
+                      <img :src="image.preview" class="w-full h-full object-cover rounded" />
+                      <button type="button" @click="removeImage(index)" class="absolute top-1 right-1 bg-red-500 text-white rounded-full p-1">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -199,6 +211,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue"
+import draggable from "vuedraggable"
 
 const title = ref("")
 const url = ref("")
@@ -280,6 +293,18 @@ const addNewTag = () => {
     selectedTags.value.push(newTag.value.trim())
     newTag.value = ""
   }
+}
+
+const dragStart = (index) => {
+  event.dataTransfer.setData("text/plain", index)
+}
+
+const dropImage = (dropIndex) => {
+  const dragIndex = parseInt(event.dataTransfer.getData("text/plain"))
+  const images = [...uploadedImages.value]
+  const [draggedImage] = images.splice(dragIndex, 1)
+  images.splice(dropIndex, 0, draggedImage)
+  uploadedImages.value = images
 }
 
 const submitForm = async () => {
