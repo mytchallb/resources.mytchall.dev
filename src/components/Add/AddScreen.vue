@@ -19,7 +19,6 @@
           </div>
 
           <div>
-            z
             <label for="excerpt" class="block text-sm font-medium text-gray-300">Excerpt</label>
             <textarea
               rows="3"
