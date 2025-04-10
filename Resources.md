@@ -7,6 +7,7 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 ## Categories
 
 - [Analytics](#analytics)
+- [Android](#android)
 - [Api](#api)
 - [Audio](#audio)
 - [Cms](#cms)
@@ -17,6 +18,11 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 ## Analytics
 
 - [Umami](https://umami.is) - Self-hosted, privacy-focused analytics platform.
+
+
+## Android
+
+- [Waydroid](https://waydro.id/) - A container-based approach to boot a full Android system on regular GNU/Linux systems running Wayland based desktop environments.
 
 
 ## Api

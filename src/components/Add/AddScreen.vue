@@ -7,7 +7,7 @@
         <!-- Left Column -->
         <div class="space-y-4 flex flex-col">
           <div>
-            <label for="title" class="block text-sm font-medium text-gray-300">Title</label>
+            <label for="title" class="block text-sm font-medium text-gray-100">Title</label>
             <input
               type="text"
               id="title"
@@ -19,7 +19,7 @@
           </div>
 
           <div>
-            <label for="excerpt" class="block text-sm font-medium text-gray-300">Excerpt</label>
+            <label for="excerpt" class="block text-sm font-medium text-gray-100">Excerpt</label>
             <textarea
               rows="3"
               id="excerpt"
@@ -31,7 +31,7 @@
           </div>
 
           <div class="flex-1 pb-8">
-            <label for="content" class="block text-sm font-medium text-gray-300">Content</label>
+            <label for="content" class="block text-sm font-medium text-gray-100">Content</label>
             <textarea
               id="content"
               v-model="content"
@@ -47,7 +47,7 @@
         <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label for="url" class="block text-sm font-medium text-gray-300">Full URL</label>
+              <label for="url" class="block text-sm font-medium text-gray-100">Full URL</label>
               <input
                 type="text"
                 id="url"
@@ -59,7 +59,7 @@
             </div>
 
             <div>
-              <label for="category" class="block text-sm font-medium text-gray-300">Category</label>
+              <label for="category" class="block text-sm font-medium text-gray-100">Category</label>
               <input
                 type="text"
                 id="category"
@@ -77,20 +77,20 @@
 
           <!-- Pricing & Cost -->
           <div>
-            <label class="block text-sm font-medium text-gray-300">Pricing & Cost</label>
+            <label class="block text-sm font-medium text-gray-100">Pricing & Cost</label>
             <div class="mt-2 flex gap-4 items-center">
               <div class="flex gap-4">
                 <label class="flex items-center cursor-pointer">
                   <input type="radio" v-model="pricing" value="free" class="form-radio h-4 w-4 text-blue-500 focus:ring-blue-500" />
-                  <span class="ml-2 text-gray-300">Free</span>
+                  <span class="ml-2 text-gray-100">Free</span>
                 </label>
                 <label class="flex items-center cursor-pointer">
                   <input type="radio" v-model="pricing" value="paid" class="form-radio h-4 w-4 text-blue-500 focus:ring-blue-500" />
-                  <span class="ml-2 text-gray-300">Paid</span>
+                  <span class="ml-2 text-gray-100">Paid</span>
                 </label>
                 <label class="flex items-center cursor-pointer">
                   <input type="radio" v-model="pricing" value="freemium" class="form-radio h-4 w-4 text-blue-500 focus:ring-blue-500" />
-                  <span class="ml-2 text-gray-300">Freemium</span>
+                  <span class="ml-2 text-gray-100">Freemium</span>
                 </label>
               </div>
               <div class="flex-1">
@@ -106,7 +106,7 @@
 
           <!-- Tags -->
           <div class="flex flex-col">
-            <label class="block text-sm font-medium text-gray-300">Tags</label>
+            <label class="block text-sm font-medium text-gray-100">Tags</label>
             <div class="mt-2 flex flex-wrap gap-2">
               <button
                 v-for="tag in tags"
@@ -115,7 +115,7 @@
                 @click="toggleTag(tag)"
                 :class="[
                   'px-3 py-1 rounded-full text-sm transition-colors duration-200',
-                  selectedTags.includes(tag) ? 'bg-blue-600 text-white border border-blue-600' : 'bg-gray-900 text-gray-300 border border-gray-700 hover:bg-gray-800',
+                  selectedTags.includes(tag) ? 'bg-blue-600 text-white border border-blue-600' : 'bg-gray-900 text-gray-100 border border-gray-700 hover:bg-gray-800',
                 ]"
               >
                 {{ tag }}
@@ -139,12 +139,12 @@
 
           <!-- Images -->
           <div>
-            <label class="block text-sm font-medium text-gray-300">Images</label>
+            <label class="block text-sm font-medium text-gray-100">Images</label>
             <div class="mt-2 relative cursor-pointer" @dragover.prevent="dragOver" @dragleave.prevent="dragLeave" @drop.prevent="handleDrop">
               <div class="flex flex-col px-6 pt-5 pb-6 border-2 border-gray-700 border-dashed rounded-md" :class="{ 'border-blue-500': isDragging }">
                 <label for="file-upload" class="w-full cursor-pointer">
                   <div class="space-y-1 text-center">
-                    <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                    <svg class="mx-auto h-12 w-12 text-gray-100" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
                       <path
                         d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
                         stroke-width="2"
@@ -152,7 +152,7 @@
                         stroke-linejoin="round"
                       />
                     </svg>
-                    <div class="flex text-sm text-gray-400 justify-center">
+                    <div class="flex text-sm text-gray-100 justify-center">
                       <span class="font-medium text-blue-500 hover:text-blue-400">Upload files</span>
                       <p class="pl-1">or drag and drop</p>
                     </div>
@@ -290,6 +290,8 @@ const addNewTag = () => {
   if (newTag.value.trim() && !tags.value.includes(newTag.value.trim())) {
     tags.value.push(newTag.value.trim())
     selectedTags.value.push(newTag.value.trim())
+    // Sort tags alphabetically
+    tags.value.sort((a, b) => a.localeCompare(b))
     newTag.value = ""
   }
 }
@@ -389,3 +391,9 @@ ${content.value}`
   }
 }
 </script>
+
+<style scoped>
+* {
+  color: white;
+}
+</style>

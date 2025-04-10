@@ -27,10 +27,12 @@ export const GET: APIRoute = async () => {
       categories.forEach((category: string) => allCategories.add(category.trim().toLowerCase()))
     }
   })
+  // Sort tags alphabetically
+  const sortedTags = Array.from(allTags).sort((a, b) => a.localeCompare(b))
 
   return new Response(JSON.stringify({ 
-    tags: Array.from(allTags), 
-    categories: Array.from(allCategories) 
+    tags: sortedTags,
+    categories: Array.from(allCategories)
   }), {
     status: 200,
     headers: {
