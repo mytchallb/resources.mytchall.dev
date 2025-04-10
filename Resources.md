@@ -6,17 +6,12 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 
 ## Categories
 
-- [ABC](#abc)
 - [Analytics](#analytics)
 - [Api](#api)
 - [Audio](#audio)
 - [Cms](#cms)
 - [Search](#search)
-
-## ABC
-
-- [ABC](ABC) - ABC
-
+- [Seo](#seo)
 
 ## Analytics
 
@@ -43,5 +38,10 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 ## Search
 
 - [Fuse.js](https://www.fusejs.io/) - Powerful, lightweight fuzzy-search library, with zero dependencies.
+
+
+## Seo
+
+- [SEO Tools](https://technicalseo.com/tools/) - Sitemap generator, schema structured data generator, mobile testing and more at technicalseo.com.
 
 
