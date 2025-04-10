@@ -6,7 +6,7 @@ import sharp from "sharp"
 
 const CONVERT_TO_WEBP_TYPES = ["image/jpeg", "image/jpg", "image/png"]
 const MAX_DIMENSION = 2000
-const WEBP_QUALITY = 90
+const WEBP_QUALITY = 100
 
 export const POST: APIRoute = async ({ request }) => {
   if (process.env.ASTRO_SSR !== "true") {
