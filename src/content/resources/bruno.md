@@ -6,7 +6,7 @@ category: "Api"
 url: "https://www.usebruno.com/"
 cost: ""
 pricing: "Free"
-excerpt: "a Git-integrated, fully offline, and open-source API client"
+excerpt: "A Git-integrated, fully offline, and open-source API client."
 ---
 
 Bruno is a Fast and Git-Friendly Opensource API client, aimed at revolutionizing the status quo represented by Postman, Insomnia, and similar tools out there.

@@ -1,29 +1,7 @@
 ---
 title: "Umami"
-tags:
-  [
-    "open-source",
-    "self-hosted",
-    "analytics",
-    "privacy-focused",
-    "web-analytics",
-    "gdpr-compliant",
-    "real-time",
-    "tracking",
-    "metrics",
-    "website-stats",
-    "dashboard",
-    "monitoring",
-    "data-analysis",
-    "visitor-tracking",
-    "performance-monitoring",
-    "multi-site",
-    "cookie-less",
-    "reporting",
-    "traffic-analysis",
-    "user-behavior",
-  ]
-images: ["/images/umami.jpg"]
+tags: ["open-source", "analytics", "privacy-focused", "monitoring", "node.js"]
+images: ["/images/umamijs.webp"]
 category: "analytics"
 url: "https://umami.is"
 date: "2024-02-23T02:14:02.184Z"

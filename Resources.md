@@ -10,6 +10,7 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 - [Api](#api)
 - [Audio](#audio)
 - [Cms](#cms)
+- [Fonts](#fonts)
 - [Search](#search)
 - [Seo](#seo)
 
@@ -20,19 +21,22 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 
 ## Api
 
-- [Bruno](https://www.usebruno.com/) - a Git-integrated, fully offline, and open-source API client
-
-- [Bruno](https://www.usebruno.com/) - a Git-integrated, fully offline, and open-source API client
+- [Bruno](https://www.usebruno.com/) - A Git-integrated, fully offline, and open-source API client.
 
 
 ## Audio
 
-- [Reaper](https://www.reaper.fm/) - A digital audio app offering multitrack audio and MIDI recording, editing, processing, mixing and mastering.
+- [Reaper](https://www.reaper.fm/) - A complete digital audio workstation offering professional-grade recording, editing, and mixing capabilities.
 
 
 ## Cms
 
 - [Statamic](https://statamic.com) - Statamic is a modern, clean, and adaptable CMS built on Laravel that can run full-stack, headless, on flat files or databases, or as a static site generator.
+
+
+## Fonts
+
+- [Atkinson Hyperlegible™ font](https://www.brailleinstitute.org/freefont/) - At Braille Institute, we’ve created a family of hyperlegible™ fonts designed to improve legibility and readability for individuals with low vision. These carefully crafted fonts feature clear, highly distinctive letters and numbers that make reading easier and more accessible.
 
 
 ## Search

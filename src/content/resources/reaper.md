@@ -1,94 +1,14 @@
 ---
 title: "Reaper"
-tags: ["app"]
+tags: ["audio", "daw", "music-production", "recording"]
 images: ["/images/reaper.jpg"]
 category: "audio"
 url: "https://www.reaper.fm/"
 cost: "$60 - $225 usd"
 pricing: "freemium"
-excerpt: "A digital audio app offering multitrack audio and MIDI recording, editing, processing, mixing and mastering."
+excerpt: "A complete digital audio workstation offering professional-grade recording, editing, and mixing capabilities."
 ---
 
-## WOW
+REAPER is a professional-grade digital audio workstation (DAW) that provides a comprehensive suite of tools for recording, editing, processing, mixing, and mastering audio. It's known for its stability, efficiency, and flexibility across various professional and educational environments.
 
-REAPER is a complete digital audio app, offering a full multitrack audio and MIDI recording, editing, processing, mixing and mastering toolset.
-
-REAPER supports a vast range of hardware, digital formats and plugins, and can be comprehensively extended, scripted and modified.
-
----
-
-# Markdown Styling Showcase
-
-## Headings
-
-# H1
-
-## H2
-
-### H3
-
-#### H4
-
-##### H5
-
-###### H6
-
----
-
-## Emphasis
-
-**Bold text**  
-_Italic text_  
-**_Bold and italic_**  
-~~Strikethrough~~
-
----
-
-## Lists
-
-### Unordered List
-
-- Item 1
-  - Nested Item
-- Item 2
-
-### Ordered List
-
-1. First
-2. Second
-   1. Sub-item
-   2. Sub-item
-
----
-
-## Links
-
-[OpenAI](https://openai.com)
-
----
-
-## Images
-
-![Alt text](https://via.placeholder.com/150)
-
----
-
-## Blockquotes
-
-> This is a blockquote.  
-> With multiple lines.
-
----
-
-## Code
-
-Inline `code` example
-
-### Code Block
-
-```js
-const greet = (name) => {
-  console.log(`Hello, ${name}!`)
-}
-greet("World")
-```
+The software supports unlimited tracks, extensive MIDI capabilities, and thousands of third-party plugins (VST, VST3, AU, CLAP). Key features include 64-bit audio processing, multichannel support, automation, surround sound, and customizable layouts. REAPER offers a 60-day evaluation period with no limitations, followed by an affordable, DRM-free licensing model.
