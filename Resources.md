@@ -17,6 +17,10 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 
 ## Analytics
 
+- [Formbricks](https://formbricks.com/) - A privacy-first Experience Management suite built on the largest open source survey platform worldwide. Gather feedback on websites, apps and everywhere else to understand what your customers need.
+
+- [PostHog](https://posthog.com/) - A single platform to analyze, test, observe, and deploy new features.
+
 - [Umami](https://umami.is) - Self-hosted, privacy-focused analytics platform.
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Umami"
-tags: ["open-source", "analytics", "privacy-focused", "monitoring", "node.js"]
+tags: ["open-source", "analytics", "monitoring", "node.js"]
 images: ["/images/umamijs.webp"]
 category: "analytics"
 url: "https://umami.is"
