@@ -1,6 +1,6 @@
 ---
 title: "Bruno"
-tags: ["open-source", "self-hosted", "extra"]
+tags: ["open-source", "api"]
 images: ["/images/bruno.webp"]
 category: "Api"
 url: "https://www.usebruno.com/"
