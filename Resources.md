@@ -13,10 +13,12 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 - [Api](#api)
 - [Audio](#audio)
 - [Cms](#cms)
+- [Crm](#crm)
 - [Emulator](#emulator)
 - [Fonts](#fonts)
 - [Game dev](#game dev)
 - [Linux](#linux)
+- [Maps](#maps)
 - [Search](#search)
 - [Seo](#seo)
 - [Web frameworks](#web frameworks)
@@ -54,12 +56,19 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 
 ## Audio
 
+- [howler.js](https://howlerjs.com/) - howler.js makes working with audio in JavaScript easy and reliable across all platforms.
+
 - [Reaper](https://www.reaper.fm/) - A complete digital audio workstation offering professional-grade recording, editing, and mixing capabilities.
 
 
 ## Cms
 
 - [Statamic](https://statamic.com) - Statamic is a modern, clean, and adaptable CMS built on Laravel that can run full-stack, headless, on flat files or databases, or as a static site generator.
+
+
+## Crm
+
+- [Twenty](https://twenty.com/) - Twenty is an open-source CRM.
 
 
 ## Emulator
@@ -82,6 +91,11 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 - [Fedora Asahi Remix](https://asahilinux.org/fedora/) - The most polished Linux® for Apple Silicon Macs.
 
 
+## Maps
+
+- [OpenFreeMap](https://openfreemap.org) - OpenFreeMap lets you display custom maps on your website and apps for free.
+
+
 ## Search
 
 - [Fuse.js](https://www.fusejs.io/) - Powerful, lightweight fuzzy-search library, with zero dependencies.
@@ -92,6 +106,8 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 
 
 ## Seo
+
+- [Screaming Frog SEO Spider](https://www.screamingfrog.co.uk/) - The Screaming Frog SEO Spider is a website crawler that helps you improve onsite SEO by auditing for common SEO issues.
 
 - [SEO Tools](https://technicalseo.com/tools/) - Sitemap generator, schema structured data generator, mobile testing and more at technicalseo.com.
 
