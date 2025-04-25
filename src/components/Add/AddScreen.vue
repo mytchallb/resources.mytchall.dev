@@ -125,10 +125,11 @@
                   type="text"
                   v-model="newTag"
                   @keydown.enter.prevent="addNewTag"
+                  @keydown.esc="newTag = ''"
                   class="px-3 py-1 rounded-full text-sm border border-gray-700 bg-gray-900 text-white focus:outline-none focus:border-blue-500"
                   placeholder="+ Add tag"
                 />
-                <button v-if="newTag" @click="addNewTag" class="absolute right-2 top-1/2 -translate-y-1/2 text-blue-500 hover:text-blue-400">
+                <button v-if="newTag" @click.prevent="addNewTag" class="absolute right-2 top-1/2 -translate-y-1/2 text-blue-500 hover:text-blue-400">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                   </svg>

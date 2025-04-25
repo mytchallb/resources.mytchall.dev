@@ -6,7 +6,7 @@
     :class="[$isOpen ? 'w-[160px] absolute lg:relative px-2' : 'w-[0px] absolute lg:relative lg:w-[160px] lg:px-2']"
   >
     <!-- Contents -->
-    <div class="relative z-30">
+    <div class="relative z-30 flex flex-col h-full">
       <h1 class="text-xl mb-4 px-4 font-bold overflow-hidden relative">
         <IconLogo />
       </h1>
@@ -29,7 +29,7 @@
         </a>
       </div>
       <!-- Categories -->
-      <ul class="flex flex-col gap-1">
+      <ul class="flex-1 overflow-y-auto scrollbar-hide">
         <li
           v-for="category in categories"
           :key="category.name"

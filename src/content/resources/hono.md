@@ -1,8 +1,8 @@
 ---
 title: "Hono"
-tags: ["open-source","node.js","javascript"]
+tags: ["open-source", "node.js", "javascript"]
 images: ["/images/56ca3a59-f895-4436-a39a-99beb7844ef4.webp"]
-category: "web frameworks"
+category: "web server"
 url: "https://hono.dev/"
 cost: ""
 pricing: "free"

@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "ASTRO_SSR=false astro dev --host --open",
-    "add": "ASTRO_SSR=true astro dev --host --experimental-ssr --open /add",
+    "add": "ASTRO_SSR=true astro dev --host --experimental-ssr --no-hmr --open /add",
     "build": "npm run create-contents && ASTRO_SSR=false astro build",
     "preview": "astro preview",
     "astro": "astro",

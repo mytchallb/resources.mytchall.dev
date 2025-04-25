@@ -12,6 +12,8 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 - [Animation](#animation)
 - [Api](#api)
 - [Audio](#audio)
+- [AWS](#aws)
+- [Backup](#backup)
 - [Cms](#cms)
 - [Crm](#crm)
 - [Emulator](#emulator)
@@ -19,9 +21,12 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 - [Game dev](#game dev)
 - [Linux](#linux)
 - [Maps](#maps)
+- [Marketing](#marketing)
+- [Php](#php)
+- [POS](#pos)
 - [Search](#search)
 - [Seo](#seo)
-- [Web frameworks](#web frameworks)
+- [Web server](#web server)
 
 ## Ai
 
@@ -61,6 +66,16 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 - [Reaper](https://www.reaper.fm/) - A complete digital audio workstation offering professional-grade recording, editing, and mixing capabilities.
 
 
+## AWS
+
+- [LocalStack](https://www.localstack.cloud/) - Local AWS cloud stack for development and testing, enabling local development of cloud applications.
+
+
+## Backup
+
+- [Kopia](https://kopia.io/) - Fast and Secure Open-Source Backup Software.
+
+
 ## Cms
 
 - [Statamic](https://statamic.com) - Statamic is a modern, clean, and adaptable CMS built on Laravel that can run full-stack, headless, on flat files or databases, or as a static site generator.
@@ -96,6 +111,21 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 - [OpenFreeMap](https://openfreemap.org) - OpenFreeMap lets you display custom maps on your website and apps for free.
 
 
+## Marketing
+
+- [Buffer](https://buffer.com/) - Schedule your content to the most popular social platforms.
+
+
+## Php
+
+- [FrankenPHP](https://frankenphp.dev/) - The Modern PHP App Server, written in Go.
+
+
+## POS
+
+- [Retail Express](https://retailexpress.com.au/) - Powerful POS software & omnichannel features for single & multi-store product retailers
+
+
 ## Search
 
 - [Fuse.js](https://www.fusejs.io/) - Powerful, lightweight fuzzy-search library, with zero dependencies.
@@ -112,7 +142,7 @@ See the main [Readme.md](./Readme.md) for more details, or browse these resource
 - [SEO Tools](https://technicalseo.com/tools/) - Sitemap generator, schema structured data generator, mobile testing and more at technicalseo.com.
 
 
-## Web frameworks
+## Web server
 
 - [Hono](https://hono.dev/) - Hono is a simple, fast and light-weight web application framework similar to Express, without a frontend.
 
